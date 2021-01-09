@@ -1,9 +1,9 @@
 import Levenshtein as lev
 
-from BelyVeterFridge import belyveter_fridges as bely_veter_items
-from TechnodomFridge import technodom_fridges as technodom_items
-from MechtaFridge import mechta_fridges as mechta_items
-from SulpakFridge import sulpak_fridges as sulpak_items
+from BelyVeterCoffeMachine import belyveter_coffee_machine as bely_veter_items
+from TechnodomCoffeeMachine import technodom_coffee_machine as technodom_items
+from MechtaCoffeeMachine import mechta_coffee_machine as mechta_items
+from SulpakCoffeeMachine import sulpak_coffee_machine as sulpak_items
 
 
 def similarity(str1, str2):
@@ -24,6 +24,7 @@ def find_similar(technodom_items, sulpak_items, mechta_items, bely_veter_items):
 
     for i in range(len(technodom_items)):
         if used1.get(i) is True: continue
+        to_break = False
         for j in range(len(sulpak_items)):
             if used2.get(j) is True: continue
             for k in range(len(mechta_items)):
@@ -45,9 +46,11 @@ def find_similar(technodom_items, sulpak_items, mechta_items, bely_veter_items):
                         used2[j] = True
                         used3[k] = True
                         used4[l] = True
-                        i += 1
-                        j += 1
-                        k += 1
+                        to_break = True
+                        break
+                
+                if to_break: break
+            if to_break: break 
 
     return result
 

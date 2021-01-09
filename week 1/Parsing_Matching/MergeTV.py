@@ -1,9 +1,9 @@
 import Levenshtein as lev
 
-from BelyVeterSmartWatcher import belyveter_smart_watches as bely_veter_items
-from TechnodomSmartWatcher import technodom_smart_whatches as technodom_items
-from MechtaSmartWatcher import mechta_smart_whatches as mechta_items
-from SulpakSmartWatcher import sulpak_smart_whatches as sulpak_items
+from BelyVeterTV import belyveter_tv as bely_veter_items
+from TechnodomTV import technodom_tv as technodom_items
+from MechtaTV import mechta_tv as mechta_items
+from SulpakTV import sulpak_tv as sulpak_items
 
 
 def similarity(str1, str2):
@@ -24,6 +24,7 @@ def find_similar(technodom_items, sulpak_items, mechta_items, bely_veter_items):
 
     for i in range(len(technodom_items)):
         if used1.get(i) is True: continue
+        to_break = False
         for j in range(len(sulpak_items)):
             if used2.get(j) is True: continue
             for k in range(len(mechta_items)):
@@ -45,9 +46,11 @@ def find_similar(technodom_items, sulpak_items, mechta_items, bely_veter_items):
                         used2[j] = True
                         used3[k] = True
                         used4[l] = True
-                        i += 1
-                        j += 1
-                        k += 1
+                        to_break = True
+                        break
+                
+                if to_break: break
+            if to_break: break 
 
     return result
 
