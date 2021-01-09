@@ -1,11 +1,9 @@
 import Levenshtein as lev
 
-
-
-from Parsers.BelyVeterCoffeMachine import belyveter_coffee_machine as bely_veter_items
-from Parsers.TechnodomCoffeeMachine import technodom_coffee_machine as technodom_items
-from Parsers.MechtaCoffeeMachine import mechta_coffee_machine as mechta_items
-from Parsers.SulpakCoffeeMachine import sulpak_coffee_machine as sulpak_items
+from BelyVeterFridge import belyveter_fridges as bely_veter_items
+from TechnodomFridge import technodom_fridges as technodom_items
+from MechtaFridge import mechta_fridges as mechta_items
+from SulpakFridge import sulpak_fridges as sulpak_items
 
 
 def similarity(str1, str2):

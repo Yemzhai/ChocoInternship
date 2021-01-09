@@ -1,9 +1,9 @@
 import Levenshtein as lev
 
-from Parsers.BelyVeterSmartWatcher import belyveter_smart_watches as bely_veter_items
-from Parsers.TechnodomSmartWatcher import technodom_smart_whatches as technodom_items
-from Parsers.MechtaSmartWatcher import mechta_smart_whatches as mechta_items
-from Parsers.SulpakSmartWatcher import sulpak_smart_whatches as sulpak_items
+from BelyVeterSmartWatcher import belyveter_smart_watches as bely_veter_items
+from TechnodomSmartWatcher import technodom_smart_whatches as technodom_items
+from MechtaSmartWatcher import mechta_smart_whatches as mechta_items
+from SulpakSmartWatcher import sulpak_smart_whatches as sulpak_items
 
 
 def similarity(str1, str2):
