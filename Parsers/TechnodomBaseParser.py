@@ -1,5 +1,4 @@
 from selenium import webdriver
-import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -7,16 +6,17 @@ from selenium.common.exceptions import TimeoutException
 
 
 class TechnodomParser(object):
-    def __init__(self, driver, technodom_items):
+    def __init__(self, driver, technodom_items, url, pages):
         self.driver = driver
         self.technodom_items = technodom_items
+        self.url = url
+        self.pages = pages
+
     def parse(self):
         delay = 5
-        for page in range(1, 2): #12
-
+        for page in range(1, self.pages):
             item_from = 'technodom'
-
-            self.driver.get('https://www.technodom.kz/aktobe/noutbuki-i-komp-jutery/noutbuki-i-aksessuary/noutbuki?page={}'.format(page))
+            self.driver.get(f'{self.url}?page={page}')
             try:
                 try:
                     WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.CLASS_NAME, 'ButtonNext__Text_Size-L')))
@@ -40,13 +40,14 @@ class TechnodomParser(object):
                 print("Loading took too much time!")
         self.driver.close()
 
-        
 
-driver = webdriver.Chrome()
-technodom_items = []
-technodom_parser = TechnodomParser(driver, technodom_items)
-technodom_parser.parse()
 
-# for i in technodom_items:
-#     print(i)
+def get_start_technodom(url, pages):
+    driver = webdriver.Chrome()
+    technodom_items = []
+    technodom_parser = TechnodomParser(driver, technodom_items, url, pages)
+    technodom_parser.parse()
+    return technodom_items
+    # for i in technodom_items:
+    #     print(i)
 

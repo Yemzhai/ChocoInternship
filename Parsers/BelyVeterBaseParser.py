@@ -2,20 +2,22 @@ import requests
 from bs4 import BeautifulSoup
 
 
-class BelyVeterParser():
-    def __init__(self, bely_veter_items):
+class BelyVeterParser(object):
+    def __init__(self, bely_veter_items, url, pages):
         self.bely_veter_items = bely_veter_items
+        self.url = url
+        self.pages = pages
 
-    def parse(self, params=None):
+    def parse(self):
         item_from = "bely veter"
-        for page in range(1, 2):
+        for page in range(1, self.pages):
             print(page, "- Bely veter page is ready!")
 
-            URL = "https://shop.kz/noutbuki/filter/almaty-is-v_nalichii-or-ojidaem-or-dostavim/apply/?PAGEN_1={}".format(page)
+            URL = f"{self.url}={page}"
             HEADERS = {
                 'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Mobile Safari/537.36'
             }
-            response = requests.get(URL, headers=HEADERS, params=params)
+            response = requests.get(URL, headers=HEADERS)
             soup = BeautifulSoup(response.content, 'html.parser')
             items = soup.findAll('div', class_='bx_catalog_item double')
             for item in items:
@@ -26,10 +28,10 @@ class BelyVeterParser():
                 self.bely_veter_items.append(information)
 
 
-
-bely_veter_items = []
-bely_veter_parser = BelyVeterParser(bely_veter_items)
-bely_veter_parser.parse()
-
-# for i in bely_veter_items:
-#     print(i)
+def get_start_bely_veter(url, pages):
+    bely_veter_items = []
+    bely_veter_parser = BelyVeterParser(bely_veter_items, url, pages)
+    bely_veter_parser.parse()
+    return bely_veter_items
+    # for i in bely_veter_items:
+    #     print(i)

@@ -6,16 +6,18 @@ from selenium.common.exceptions import TimeoutException
 
 
 class SulpakParser(object):
-    def __init__(self, driver, sulpak_items):
+    def __init__(self, driver, sulpak_items, url, pages):
         self.driver = driver
         self.sulpak_items = sulpak_items
+        self.url = url
+        self.pages = pages
 
     def parse(self):
         delay = 5
-        for page in range(1, 2): #13
+        for page in range(1, self.pages): #13
             item_from = 'sulpak'
             try:
-                self.driver.get('https://www.sulpak.kz/f/noutbuki?page={}'.format(page))
+                self.driver.get(f'{self.url}?page={page}')
                 try:
                     WebDriverWait(self.driver, delay).until(EC.presence_of_element_located((By.CLASS_NAME, 'location-window-button')))
                     btn_city = self.driver.find_element_by_class_name('location-window-button')
@@ -42,10 +44,12 @@ class SulpakParser(object):
         self.driver.close()
 
 
+def get_start_sulpak(url, pages):
+    driver = webdriver.Chrome()
+    sulpak_items = []
+    sulpak_parser = SulpakParser(driver, sulpak_items, url, pages)
+    sulpak_parser.parse()
+    return sulpak_items
 
-driver = webdriver.Chrome()
-sulpak_items = []
-sulpak_parser = SulpakParser(driver, sulpak_items)
-sulpak_parser.parse()
-# for i in sulpak_items:
-#     print(i)
+    # for i in sulpak_items:
+    #     print(i)
