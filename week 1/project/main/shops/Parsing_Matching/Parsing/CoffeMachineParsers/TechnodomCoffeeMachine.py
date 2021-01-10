@@ -1,4 +1,4 @@
-from TechnodomBaseParser import get_start_technodom
+from project.main.shops.Parsing_Matching.Parsing.BaseOfParsers.TechnodomBaseParser import get_start_technodom
 
 url = 'https://www.technodom.kz/aktobe/tehnika-dlja-kuhni/prigotovlenie-kofe/kofemashiny'
 pages = 3

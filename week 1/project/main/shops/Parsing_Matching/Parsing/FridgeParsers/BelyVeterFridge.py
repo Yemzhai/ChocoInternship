@@ -1,4 +1,4 @@
-from BelyVeterBaseParser import get_start_bely_veter
+from project.main.shops.Parsing_Matching.Parsing.BaseOfParsers.BelyVeterBaseParser import get_start_bely_veter
 
 url = 'https://shop.kz/kholodilniki/filter/almaty-is-v_nalichii-or-ojidaem-or-dostavim/apply/?PAGEN_1'
 pages = 2

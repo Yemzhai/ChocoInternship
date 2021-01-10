@@ -1,6 +1,6 @@
-from TechnodomBaseParser import get_start_technodom
+from project.main.shops.Parsing_Matching.Parsing.BaseOfParsers.TechnodomBaseParser import get_start_technodom
 url = "https://www.technodom.kz/aktobe/smartfony-i-gadzhety/gadzhety/smart-chasy"
-pages = 7
+pages = 4
 
 technodom_smart_whatches = get_start_technodom(url, pages)
 

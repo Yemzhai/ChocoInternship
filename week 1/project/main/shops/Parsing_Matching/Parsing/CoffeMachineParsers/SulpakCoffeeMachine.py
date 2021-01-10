@@ -1,4 +1,4 @@
-from SulpakBaseParser import get_start_sulpak
+from project.main.shops.Parsing_Matching.Parsing.BaseOfParsers.SulpakBaseParser import get_start_sulpak
 
 url = "https://www.sulpak.kz/f/kofemashiniy"
 pages = 3

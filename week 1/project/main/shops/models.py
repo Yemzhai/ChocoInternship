@@ -26,7 +26,7 @@ class Shop(models.Model):
 
 class Item(models.Model):
     title = models.CharField(max_length=120, db_index=True)
-    category = models.ForeignKey('Category', on_delete=models.PROTECT,related_name='shop')
+    category = models.ForeignKey('Category', on_delete=models.PROTECT, related_name='shop')
     shop = models.ForeignKey('Shop', on_delete=models.PROTECT, related_name='item')
 
     class Meta:
