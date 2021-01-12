@@ -37,9 +37,11 @@ class Item(models.Model):
 
 
 class Price(models.Model):
-    price = models.IntegerField()
+    price = models.IntegerField('Price')
     item = models.ForeignKey('Item', on_delete=models.CASCADE, related_name='price')
     shop = models.ForeignKey('Shop', verbose_name='shop', on_delete=models.PROTECT, related_name='item')
+    category = models.ForeignKey('Category', verbose_name='category', on_delete=models.PROTECT,related_name='price')
+
 
 
     def __str__(self):
