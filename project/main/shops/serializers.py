@@ -25,7 +25,6 @@ class ItemListSerializer(serializers.ModelSerializer): # для листов т�
         fields = "__all__"
 
 
-
 class ItemDetailSerializer(serializers.ModelSerializer):   # для каждого товара
     category = serializers.SlugRelatedField(slug_field='title', read_only=True)
     class Meta:

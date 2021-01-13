@@ -33,5 +33,3 @@ def get_start_bely_veter(url, pages):
     bely_veter_parser = BelyVeterParser(bely_veter_items, url, pages)
     bely_veter_parser.parse()
     return bely_veter_items
-    # for i in bely_veter_items:
-    #     print(i)

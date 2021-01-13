@@ -23,4 +23,3 @@ url = "https://www.mechta.kz/api/main/catalog_new/index.php?section=televizory&p
 pages = 4
 mechta_items = get_start_mechta(url, pages)
 
-

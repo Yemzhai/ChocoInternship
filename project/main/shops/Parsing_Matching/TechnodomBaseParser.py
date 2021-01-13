@@ -48,6 +48,4 @@ def get_start_technodom(url, pages):
     technodom_parser = TechnodomParser(driver, technodom_items, url, pages)
     technodom_parser.parse()
     return technodom_items
-    # for i in technodom_items:
-    #     print(i)
 

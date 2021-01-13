@@ -14,7 +14,7 @@ class SulpakParser(object):
 
     def parse(self):
         delay = 5
-        for page in range(1, self.pages): #13
+        for page in range(1, self.pages):
             item_from = 'sulpak'
             try:
                 self.driver.get(f'{self.url}?page={page}')
@@ -50,6 +50,3 @@ def get_start_sulpak(url, pages):
     sulpak_parser = SulpakParser(driver, sulpak_items, url, pages)
     sulpak_parser.parse()
     return sulpak_items
-
-    # for i in sulpak_items:
-    #     print(i)

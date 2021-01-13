@@ -2,14 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4446b63-3e87-42ad-8ed9-f5c11ea8bba2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main/shops/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/shops/Parsing_Matching/ActionsToMerge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/shops/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/shops/tests/test_merge.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/shops/tests/test_url.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shops/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shops/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shops/Parsing_Matching/BelyVeterBaseParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/Parsing_Matching/BelyVeterBaseParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shops/Parsing_Matching/MechtaBaseParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/Parsing_Matching/MechtaBaseParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shops/Parsing_Matching/MergeCoffeeMachine.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/Parsing_Matching/MergeCoffeeMachine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shops/Parsing_Matching/MergeFridge.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/Parsing_Matching/MergeFridge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shops/Parsing_Matching/MergeSmartWatches.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/Parsing_Matching/MergeSmartWatches.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shops/Parsing_Matching/MergeTV.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/Parsing_Matching/MergeTV.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shops/Parsing_Matching/SulpakBaseParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/Parsing_Matching/SulpakBaseParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shops/Parsing_Matching/TV.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/Parsing_Matching/TV.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shops/Parsing_Matching/TechnodomBaseParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/Parsing_Matching/TechnodomBaseParser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/shops/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/shops/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/shops/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/shops/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/shops/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +45,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/main/main" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main/main" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main/shops/Parsing_Matching" />
+      <recent name="$PROJECT_DIR$/main/shops/Parsing_Matching/q" />
+      <recent name="$PROJECT_DIR$/main/shops/Parsing_Matching/Merge" />
+      <recent name="$PROJECT_DIR$/main" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

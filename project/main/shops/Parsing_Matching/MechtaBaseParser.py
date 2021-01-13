@@ -33,5 +33,3 @@ def get_start_mechta(url, pages):
     mechta_parser = MechtaParser(mechta_items, url, pages)
     mechta_parser.parse()
     return mechta_items
-    # for i in mechta_items:
-    #     print(i)
