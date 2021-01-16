@@ -37,10 +37,10 @@ class Item(models.Model):
 
 
 class Price(models.Model):
-    price = models.IntegerField('Price')
+    price = models.CharField('Price', max_length=9)
     item = models.ForeignKey('Item', on_delete=models.CASCADE, related_name='price')
     shop = models.ForeignKey('Shop', verbose_name='shop', on_delete=models.PROTECT, related_name='item')
-    category = models.ForeignKey('Category', verbose_name='category', on_delete=models.PROTECT,related_name='price')
+    category = models.ForeignKey('Category', verbose_name='category', on_delete=models.PROTECT, related_name='price')
 
 
 

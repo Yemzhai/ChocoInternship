@@ -134,6 +134,6 @@ CELERY_TASK_SERIALIZER = 'json'
 CELERY_BEAT_SCHEDULE = {
     'add_to_db': {
         'task': 'shops.tasks.add_to_db',
-        'schedule': 3600,
+        'schedule': 3,
     }
 }

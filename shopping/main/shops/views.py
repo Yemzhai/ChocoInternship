@@ -1,6 +1,4 @@
 from rest_framework.views import APIView
-from django.shortcuts import get_object_or_404
-from rest_framework.response import Response
 from .serializers import *
 from .utils import ObjectListMixin, ObjectDetailMixin
 
@@ -27,7 +25,18 @@ class CategoryDetailView(ObjectDetailMixin, APIView):
     serializer = CategoryDetailSerializer
 
 
+# MAX and MIN PRICE IN CATEGORIES
 class CategoryMinPriceView(ObjectListMixin, APIView):
     model = Category
     serializer = CategoryMinPriceSerializer
 
+
+class CategoryMaxPriceView(ObjectListMixin, APIView):
+    model = Category
+    serializer = CategoryMaxPriceSerializer
+
+
+# PRICES VIEW
+class PriceListView(ObjectListMixin, APIView):
+    model = Price
+    serializer = PriceSerializer

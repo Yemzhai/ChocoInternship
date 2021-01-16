@@ -60,9 +60,8 @@ class ToMerge():
             for c in price:
                 if (c >= '0' and c <= '9') or c == '.':
                     new_price += c
-            if new_price == '':
-                new_price = 0
-            items[i] = [items[i][:price_start - 1], int(new_price), items[i][from_start + 6:]]
+            if new_price != '':
+                items[i] = [items[i][:price_start - 1], new_price, items[i][from_start + 6:]]
         return items
 
     # фукция которая принимает массив строк и заменяет их на измененный и отправляет на сравнение
